@@ -67,7 +67,7 @@ function makeAxisValue([int]$i, [double]$offset) {
 }
 
 function jn($s) {
-  ($s|where {$_}|%{$trim=$true}{if($trim){$_.Trim("`n").Trim()}else{$_.Trim("`n")};$trim=$false}) -join "`n"
+  ($s|where {$_}|%{$_.Trim([Environment]::NewLine)}|%{$trim=$true}{if($trim){$_.Trim()}else{$_};$trim=$false}) -join [Environment]::NewLine
 }
 
 $height = 7.25
@@ -156,7 +156,7 @@ Write-Output @"
   </g>
   <!-- remark text -->
   <g font-size='0.2' fill='black' transform='translate($($width/2-2),$($height-1.9))'><text>
-    $(@"
+    $(jn (@"
     * Кожна точка відповідає кількості зареєстрованих випадків на певну дату.
     Наведіть курсором на точку, щоб побачити дату та інші дані.
     &#160;
@@ -164,7 +164,8 @@ Write-Output @"
     яка, вірогідно, пов'язана з інкубаційним періодом (2-14 днів за даними ВОЗ).
     Наприклад, від початку ізолювання осіб із підозрою на коронавірус 07/02
     до різкого зламу лінії розвитку епідемії у Китаї 14/02 минув тиждень.
-"@.Split("`n")|%{"<tspan x='0' dy='0.25'>$_</tspan>"})
+"@ -split [Environment]::NewLine|%{"
+    <tspan x='0' dy='0.25'>$($_.Trim())</tspan>"}))
   </text></g>
 </svg>
 "@|Out-File -FilePath graph.svg -Force -Encoding UTF8
