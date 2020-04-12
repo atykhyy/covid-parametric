@@ -1,0 +1,1 @@
+Run `powershell .\graph.ps1` to download fresh data and generate the SVG graph.
