@@ -82,7 +82,7 @@ Write-Output @"
 <svg xmlns='http://www.w3.org/2000/svg' version='1.1' baseProfile='full' viewBox='-1 -1 $($width+2) $($height+2)' fill='none'>
   <!-- title and axis names -->
   <g fill='black' font-size='0.3' text-anchor='middle'>
-    <text transform='translate($($width/2),-0.35)'>Дані* по розвитку епідемій COVID-19 у 3 країнах у вигляді параметричного (<tspan font-style='italic'>не календарного</tspan>) графіка</text>
+    <text transform='translate($($width/2),-0.35)'>COVID-19* у 4 країнах у вигляді параметричного (<tspan font-style='italic'>не календарного</tspan>) графіка</text>
     <text transform='translate($($width/2),$($height+0.75))'>Кількість зареєстрованих випадків /<a href='https://covid.ourworldindata.org'><tspan>дані Our World in Data</tspan></a>/</text>
     <text transform='translate(-0.85,$($height/2)) rotate(-90)'>Кількість зареєстрованих випадків за попередні 3 дні</text>
   </g>
