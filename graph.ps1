@@ -27,17 +27,11 @@ $countries =
   @{date="23/01";x=-0.5;y=-0.2;text="Уряд Китаю`nоголошує локдаун Уханю";link="https://www.theguardian.com/world/2020/jan/23/coronavirus-panic-and-anger-in-wuhan-as-china-orders-city-into-lockdown"},
   @{date="07/02";x=-0.4;y=-0.3;text="Уряд Китаю наказує ізолювати`nвсіх осіб із підозрою на коронавірус";link="https://www.dailymail.co.uk/news/article-7977649/China-orders-Wuhan-round-suspected-coronavirus-patients-quarantine-camps.html"}
 },
-@{country="South Korea";country_ua="Південна Корея";from="19/02";color="pink";events=@(
-  @{date="26/02";x=-0.4;y=-0.4;text="Початок drive-through`nтестування у Південній Кореї"}
-)},
-@{country="Japan";country_ua="Японія";from="03/03";color="darkred";events=@()},
 @{country="Italy";country_ua="Італія";from="22/02";color="lightgreen";events=
   @{date="09/03";x=-0.1;y=-0.9;text="Уряд Італії оголошує локдаун";link="https://en.wikipedia.org/wiki/2020_Italy_coronavirus_lockdown"},
   @{date="21/03";x=-0.3;y=-0.5;text="Уряд Італії розширює локдаун, наказує`nзупинити некритичні виробинцтва та бізнеси";link="https://en.wikipedia.org/wiki/2020_Italy_coronavirus_lockdown#Nationwide_expansion"}
 },
-@{country="Spain";country_ua="Іспанія";from="28/02";color="green";events=@()},
 @{country="United States";country_ua="США";from="02/03";color="red";events=@()},
-@{country="Russia";country_ua="Росія";from="22/03";color="cyan";events=@()},
 @{country="Ukraine";country_ua="Україна";from="22/03";color="blue";events=@()}
 
 foreach($d in $countries) {
