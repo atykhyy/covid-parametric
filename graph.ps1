@@ -72,7 +72,7 @@ function jn($s) {
 }
 
 $height = 8.25
-$width  = 10.5
+$width  = 10.6
 $xoffset=-3.5
 $yoffset=-2.7
 $xaxis  = 5..18|%{makeAxisValue $_ $xoffset}
